@@ -2,7 +2,7 @@ from random import choice
 
 
 def select_word():
-    with open("words.txt", mode='r') as words:
+    with open("words.txt", mode="r") as words:
         reading_lines = words.readlines()
         return choice(reading_lines).strip()
 
@@ -26,7 +26,7 @@ while counter > 0:
             player1_guess[index] = char
             print(" ".join(player1_guess))
             one_exist += 1
-    if (one_exist < 1):
+    if one_exist < 1:
         counter -= 1
         print(f"That is incorrect. You have {counter} lives left. Please try again!\n")
         print(" ".join(player1_guess))

@@ -18,18 +18,17 @@ print(selected_word)
 
 # Get the user player one input
 counter = 6
-while (counter > 0):
+while counter > 0:
     listening = input("Enter your input \n")
     one_exist = 0
     for index, char in enumerate(selected_word):
-        if (listening == char):
+        if listening == char:
             player1_guess[index] = char
             print(" ".join(player1_guess))
             one_exist += 1
     if (one_exist < 1):
         counter -= 1
-        print(
-            f"That is incorrect. You have {counter} lives left. Please try again!\n")
+        print(f"That is incorrect. You have {counter} lives left. Please try again!\n")
         print(" ".join(player1_guess))
 
 print("You lose!")
